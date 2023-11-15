@@ -19,7 +19,6 @@ namespace GPStracker.Repository
     {
         private readonly IMongoCollection<Package> _packages;
 
-        string envar = "";
 
         public PackageRepository(IOptions<MongoDBRestSettings> mongoDBRest)
         {

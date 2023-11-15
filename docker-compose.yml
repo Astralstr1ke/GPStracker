@@ -1,0 +1,22 @@
+﻿version: '3.1'
+services: 
+  mongohost:
+    image: mongo:7
+    restart: always
+    container_name: dbmongo
+    volumes: 
+      - dbmongo:/data/db
+    ports:
+    - 27017:27017
+
+  restapi:
+    build: .
+    restart: always
+    container_name: restapi
+    ports:
+     - 5000:5106
+    depends_on:
+      - mongohost
+
+volumes:
+  mongodbb:
