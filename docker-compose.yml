@@ -19,4 +19,4 @@ services:
       - mongohost
 
 volumes:
-  mongodbb:
+  dbmongo:
